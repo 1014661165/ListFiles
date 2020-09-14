@@ -1,0 +1,8 @@
+<Config>
+	<root_folder>/Users/wujun/Downloads/TestRepos/dataset</root_folder>
+	<file_suffix>
+		<suffix>c</suffix>
+		<suffix>h</suffix>
+	</file_suffix>
+	<filter_file>./filters.txt</filter_file>
+</Config>
