@@ -7,7 +7,6 @@ import (
 
 const (
 	ConfigFile = "./ListFiles.xml"
-	OutputFile = "./files.txt"
 )
 var (
 	FileSuffixMap = make(map[string]bool)
@@ -17,6 +16,7 @@ type Config struct {
 	RootFolder string `xml:"root_folder"`
 	FileSuffix FileSuffix `xml:"file_suffix"`
 	FilterFile string `xml:"filter_file"`
+	OutputFile string `xml:"output_file"`
 }
 
 type FileSuffix struct {

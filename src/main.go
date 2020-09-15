@@ -35,7 +35,7 @@ func main(){
 
 	//主过程
 	files, err := manager.ListFiles(conf.RootFolder, filterFileMap, true)
-	err = util.Write(config.OutputFile, files)
+	err = util.Write(conf.OutputFile, files)
 	if err != nil {
 		panic(err)
 	}
