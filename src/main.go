@@ -5,6 +5,7 @@ import (
 	"./manager"
 	"./util"
 	"log"
+	"os"
 	"time"
 )
 
@@ -17,6 +18,8 @@ func main(){
 		if err != nil {
 			panic(err)
 		}
+		log.Printf("please update %s\n", config.ConfigFile)
+		os.Exit(0)
 	}
 	err := conf.Load()
 	if err != nil {
