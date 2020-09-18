@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./config"
-	"./manager"
-	"./util"
+	"ListFiles/config"
+	"ListFiles/manager"
+	"ListFiles/util"
 	"log"
 	"os"
 	"time"

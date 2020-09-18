@@ -1,7 +1,7 @@
 package manager
 
 import (
-	"../config"
+	"ListFiles/config"
 	"io/ioutil"
 	"log"
 	"os"
