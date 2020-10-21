@@ -3,6 +3,7 @@ package config
 import (
 	"encoding/xml"
 	"io/ioutil"
+	"strings"
 )
 
 const (
@@ -43,7 +44,8 @@ func (c *Config) Load() error{
 	err = xml.Unmarshal(content, c)
 	if err == nil {
 		for _,s := range c.FileSuffix.Suffix {
-			FileSuffixMap[s] = true
+			suffix := strings.ToLower(s)
+			FileSuffixMap[suffix] = true
 		}
 	}
 	return err
