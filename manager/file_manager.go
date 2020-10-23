@@ -38,7 +38,8 @@ func ListFiles(folder string, filterFileMap map[string]bool, isProjectFolder boo
 			suffix = strings.ToLower(suffix)
 			_, ok := config.FileSuffixMap[suffix]
 			if ok {
-				_, ok2 := filterFileMap[path]
+				projectPath := path[len(config.RootFolder)+1:]
+				_, ok2 := filterFileMap[projectPath]
 				if !ok2 {
 					files = append(files, path)
 				}

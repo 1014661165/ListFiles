@@ -11,6 +11,7 @@ const (
 )
 var (
 	FileSuffixMap = make(map[string]bool)
+	RootFolder string
 )
 
 type Config struct {
@@ -42,6 +43,7 @@ func (c *Config) Load() error{
 		return err
 	}
 	err = xml.Unmarshal(content, c)
+	RootFolder = c.RootFolder
 	if err == nil {
 		for _,s := range c.FileSuffix.Suffix {
 			suffix := strings.ToLower(s)

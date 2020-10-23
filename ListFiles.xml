@@ -1,8 +1,8 @@
 <Config>
-	<root_folder></root_folder>
+	<root_folder>/Users/wujun/GitHouse</root_folder>
 	<file_suffix>
-		<suffix></suffix>
+		<suffix>java</suffix>
 	</file_suffix>
-	<filter_file></filter_file>
-	<output_file></output_file>
+	<filter_file>./filter.txt</filter_file>
+	<output_file>result.txt</output_file>
 </Config>
