@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	ConfigFile = "./ListFiles.xml"
+	ConfigFile = "./list-files.xml"
 )
 var (
 	FileSuffixMap = make(map[string]bool)
@@ -17,7 +17,6 @@ var (
 type Config struct {
 	RootFolder string `xml:"root_folder"`
 	FileSuffix FileSuffix `xml:"file_suffix"`
-	FilterFile string `xml:"filter_file"`
 	OutputFile string `xml:"output_file"`
 }
 
@@ -28,7 +27,6 @@ type FileSuffix struct {
 func (c *Config) Init(){
 	c.RootFolder = ""
 	c.FileSuffix = FileSuffix{Suffix:[]string{""}}
-	c.FilterFile = ""
 }
 
 func (c *Config) Save() error {

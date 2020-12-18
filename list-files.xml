@@ -1,0 +1,7 @@
+<Config>
+	<root_folder>D:\GitRepo</root_folder>
+	<file_suffix>
+		<suffix>java</suffix>
+	</file_suffix>
+	<output_file>result/files.txt</output_file>
+</Config>

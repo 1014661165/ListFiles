@@ -4,12 +4,12 @@ import (
 	"ListFiles/config"
 	"io/ioutil"
 	"log"
-	"os"
+	"path/filepath"
 	"strings"
 )
 
 //列出目录内的文件
-func ListFiles(folder string, filterFileMap map[string]bool, isProjectFolder bool) ([]string, error){
+func ListFiles(folder string, isProjectFolder bool) ([]string, error){
 	files := make([]string, 0)
 	fis, err := ioutil.ReadDir(folder)
 	if err != nil {
@@ -22,10 +22,10 @@ func ListFiles(folder string, filterFileMap map[string]bool, isProjectFolder boo
 			log.Printf("%.2f%%\n", float64(cnt*100)/float64(len(fis)))
 		}
 
-		path := folder + string(os.PathSeparator) + fileInfo.Name()
+		path := filepath.Join(folder, fileInfo.Name())
 		filename := fileInfo.Name()
 		if fileInfo.IsDir() {
-			fs, err := ListFiles(path, filterFileMap, false)
+			fs, err := ListFiles(path,false)
 			if err != nil {
 				continue
 			}
@@ -38,11 +38,7 @@ func ListFiles(folder string, filterFileMap map[string]bool, isProjectFolder boo
 			suffix = strings.ToLower(suffix)
 			_, ok := config.FileSuffixMap[suffix]
 			if ok {
-				projectPath := path[len(config.RootFolder)+1:]
-				_, ok2 := filterFileMap[projectPath]
-				if !ok2 {
-					files = append(files, path)
-				}
+				files = append(files, path)
 			}
 		}
 	}

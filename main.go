@@ -27,18 +27,12 @@ func main(){
 	}
 
 	timeStart := time.Now()
-	//读过滤文件
-	var filterFileMap map[string]bool
-	if util.IsFileExist(conf.FilterFile) {
-		filterFileMap, err = util.ReadAllLines(conf.FilterFile)
-	}
 
 	//主过程
-	files, err := manager.ListFiles(conf.RootFolder, filterFileMap, true)
+	files, err := manager.ListFiles(conf.RootFolder,true)
 	err = util.Write(conf.OutputFile, files)
 	if err != nil {
 		panic(err)
 	}
-	timeEnd := time.Now()
-	log.Printf("task finish! time cost:%.1f s\n", timeEnd.Sub(timeStart).Seconds())
+	log.Printf("task finish! time cost:%v\n", time.Since(timeStart))
 }

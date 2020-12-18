@@ -5,6 +5,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
@@ -41,6 +42,7 @@ func ReadAllLines(path string) (map[string]bool, error){
 
 //输出到文件
 func Write(path string, lines []string) error{
+	os.MkdirAll(filepath.Dir(path), 0744)
 	f, err := os.OpenFile(path, os.O_CREATE|os.O_WRONLY, 0744)
 	if err != nil {
 		panic(err)
