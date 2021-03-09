@@ -1,8 +1,7 @@
 <Config>
-	<root_folder>C:\Users\10146\Downloads\dataset\linux</root_folder>
+	<root_folder>D:\GitRepo</root_folder>
 	<file_suffix>
-		<suffix>c</suffix>
-		<suffix>h</suffix>
+		<suffix>java</suffix>
 	</file_suffix>
 	<output_file>files.txt</output_file>
 </Config>

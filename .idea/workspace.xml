@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="029cf4e1-72a2-4ef0-b166-89e076e385c2" name="Default Changelist" comment="" />
+    <list default="true" id="029cf4e1-72a2-4ef0-b166-89e076e385c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/files.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list-files.xml" beforeDir="false" afterPath="$PROJECT_DIR$/list-files.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,11 +144,6 @@
           <url>file://$PROJECT_DIR$/src/util/file_util.go</url>
           <line>28</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/main.go</url>
-          <line>31</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

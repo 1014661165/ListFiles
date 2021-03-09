@@ -11,6 +11,7 @@ import (
 
 func main(){
 	//读配置
+	log.SetFlags(log.Ldate|log.Ltime|log.Lshortfile)
 	conf := config.Config{}
 	if !util.IsFileExist(config.ConfigFile) {
 		conf.Init()
